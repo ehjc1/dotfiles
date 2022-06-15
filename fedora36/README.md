@@ -20,6 +20,7 @@ Table of Content
 	- Setup ZSH color scheme
 10. Tilix Installation and configuration
 11. Neovim Installation and Configuration
+12. Ranger
 
 
 
