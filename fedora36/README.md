@@ -21,7 +21,8 @@ Table of Content
 10. Tilix Installation and configuration
 11. Ranger
 12. bat
-13. Neovim Installation and Configuration
+13. starship
+14. Neovim Installation and Configuration
 
 
 # 1) Optimize `DNF` Config
