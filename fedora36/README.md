@@ -1,18 +1,14 @@
-
+# Dev environment setup
 
 This documentation contains information on how to setup a new `Dev` env.
 
-# Overview
 
-Table of Content
----
 
-1. Optimize DNF Config
-2. System Update
-3. Enable RPM
-4. Adding Flatpack
-5. VSCode Installation
-6. Nerd Font Installtion
+## Table of Content
+
+1. [Fedora Initial Config](#1-fedora-initial-config)
+2. [VSCode Install](#2-vscode-config)
+3. Nerd Font Installtion
 	- Basic Installation
 9. ZSH Installtion
 	- Oh my ZSH Installation
@@ -28,8 +24,9 @@ Table of Content
 14. Neovim Installation and Configuration
 
 
+# 1) Fedora Initial Config
 
-# 1) Optimize `DNF` Config
+## 1.1) DNF Config
 
 To get started open up a `terminal` and enter `sudo nano /etc/dnf/dnf.conf`
 
@@ -69,13 +66,13 @@ Save and quit: `ctrl+o` -> `ctrl+x`
 
 
 
-# 2) System Update
+## 1.2) System Update
 
 
 Open `terminal` and run command `sudo dnf update`
 
 
-# 3) Enable RPM Fusion
+## 1.3) Enable RPM Fusion
 
 (Official RPM Fusion site)[https://rpmfusion.org/Configuration]
 
@@ -92,6 +89,17 @@ Open `terminal` and run command `sudo dnf update`
 `sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin`
 and 
 `sudo dnf groupupdate sound-and-video`
+
+
+## 1.4) Adding Flatpack
+
+Launch your terminal and enter this command `flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
+
+# 2) VScode Config
+
+Navigate to the official VScode site [here](https://code.visualstudio.com/docs/setup/linux)
+
+
 
 # Doom emacs installation & setup
 
