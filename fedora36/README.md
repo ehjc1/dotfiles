@@ -15,9 +15,6 @@ This documentation contains information on how to setup a new `Dev` env.
 	- Powerlevel10k theme installation
 	- Setup ZSH color scheme
 10. Tilix Installation and configuration
-11. Terminal env setup
-	- doom emacs
-	- neovim
 11. Ranger
 12. bat
 13. starship
