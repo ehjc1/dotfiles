@@ -8,17 +8,7 @@ This documentation contains information on how to setup a new `Dev` env.
 
 1. [Fedora Initial Config](#1-fedora-initial-config)
 2. [VSCode Install](#2-vscode-config)
-3. Nerd Font Installtion
-	- Basic Installation
-9. ZSH Installtion
-	- Oh my ZSH Installation
-	- Powerlevel10k theme installation
-	- Setup ZSH color scheme
-10. Tilix Installation and configuration
-11. Ranger
-12. bat
-13. starship
-14. Neovim Installation and Configuration
+3. [Tilix Installation]()
 
 
 # 1) Fedora Initial Config

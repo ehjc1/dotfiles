@@ -17,6 +17,7 @@ This documentation will showcase how to get started with developing in `nvim` an
 - [Prerequisites](#prerequisites)
 - [Install](#install)
 - [Configuration](#configuration)
+  - [1) Options](#1-options)
 - [How to use?](#how-to-use)
 
 # Introduction
@@ -61,10 +62,10 @@ On a fresh machine run command:
 
 `git clone git@github.com:ChristianChiarulli/Neovim-from-scratch.git ~/.config/nvim`
 
-1. this repo will populate config files for you using chris@machine's configuration. For the sake of this guide it would be easier to follow along with the preset config. 
+1. **[OPT-1]** this repo will populate config files for you using chris@machine's configuration. For the sake of this guide it would be easier to follow along with the preset config. 
 (***NOTE:*** You can edit this later :))
 
-2. For a complete clean slate with no preset do the following:
+2. **[OPT-1]** For a complete clean slate with no preset do the following:
    1. Navigate to the release page for neovim found [here](https://github.com/neovim/neovim/releases)
    2. Find the latest release and follow the installation steps for your `OS` for sake of ease of use I will be installing via `AppImage`, run command: `curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage` in your home dir
       1. Run `chmod u+x nvim.appimage` to make it executable with the right permissions
@@ -72,7 +73,21 @@ On a fresh machine run command:
       3. If it works then run command `mv nvim.appimage /usr/local/bin/nvim` 
 
 For users with existing config file please ensure to back up your config file. Run command: `cp ~/.config/nvim ~/.config/bak.nvim`
+
 # Configuration
+
+In this configuration section we will cover 22 different `nvim` configs. With 2 different veriations. 
+
+1. **`[OPT-1]`** - Using *chris@machine's* config 
+2. **`[OPT-2]`** - Using custom *new* config
+
+for each configuration sub section I will cover how to configure for both a preset config (`[OPT-1]`) and a custom config (`[OPT-2]`).
+
+## 1) Options
+
+
+1. cd into `~/.config/nvim` dir
+
 
 
 # How to use?
