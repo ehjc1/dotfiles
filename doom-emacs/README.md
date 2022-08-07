@@ -96,3 +96,4 @@ Doom emacs uses `evil` mode and its usage is similar to how you use vim/nvim.
 - `C w w` switching split
 
 ### Navigation & basic commands
+
