@@ -28,7 +28,6 @@ I will be diving into the installations and full configuration of nvim so that i
 
 ***NOTE:*** This documentation will follow guidelines from [chris@machine's playlist "Neovim from Scratch"](https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ)
 
-[chris@machine's ]()
 # Features
 - Custom keymaps
 - plugins
@@ -75,13 +74,11 @@ Once we have installed vim and nvim we create the neccessary `files` and `dir` i
 2. `~/.config/nvim/lua/` dir
 
 ***NOTE:***
-- `init.lua` file to initialize our config for nvim
+- `init.lua` - is the entry point for the nvim config 
 - `lua` dir to store our `.lua` configuration files
 
 
 # Configuration
-
-for each configuration sub section I will cover how to configure for both a preset config (`[OPT-1]`) and a custom config (`[OPT-2]`).
 
 ## 1) Options
 
