@@ -83,7 +83,18 @@ Once we have installed vim and nvim we create the neccessary `files` and `dir` i
 ## 1) Options
 
 1. cd into `~/.config/nvim/lua` dir and create a new file called `options.lua` this is where all vim internal variables and options are set
+2. copy `.config/nvim/lua/user/options.lua` file, this file contains all neccessary options like line number
 
+
+## 2) Keymaps
+
+1. make a copy of `.config/nvim/lua/user/keymaps.lua` file
+2. In this file there will several keybinds for different functionality.
+   Next to each `keybind` there will be a comment to explain what the `keybind` does. 
+
+## 3) Plugins
+
+1. Copy the `plugins.lua` file into your `.config/nvim` dir
 
 
 # How to use?
