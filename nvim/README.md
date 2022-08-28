@@ -94,8 +94,25 @@ Once we have installed vim and nvim we create the neccessary `files` and `dir` i
 
 ## 3) Plugins
 
-1. Copy the `plugins.lua` file into your `.config/nvim` dir
+1. Copy the `plugins.lua` file into your  `.config/nvim/lua/user` dir 
 
+***Note:*** Each plugin will contain a brief comment detailing its usecase
+
+## 4) Colorschemes
+
+1. Copy `colorscheme.lua` file into your `.config/nvim/lua/user` dir
+
+### Colorshcme support:
+1. Material Theme
+
+**Default Colorscheme:**
+
+Material style: Deep ocean
+
+### Other Popular Colorschemes:
+1. [Tokyonight](https://github.com/folke/tokyonight.nvim)
 
 # How to use?
 List of useful keybinds
+
+
