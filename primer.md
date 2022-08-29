@@ -80,6 +80,7 @@ fc-cache -f -v
 ```
 fc-list | grep "Hack"
 ```
+8. In order to see the icons you need to set your terminal to the font you have installed.
 
 ## 3. Oh my zsh installation
 
