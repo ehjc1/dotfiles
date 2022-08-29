@@ -103,7 +103,7 @@ Once we have installed vim and nvim we create the neccessary `files` and `dir` i
 1. Copy `colorscheme.lua` file into your `.config/nvim/lua/user` dir
 
 ### Colorshcme support:
-1. Material Theme
+1. Material Theme (Guide [here](https://opensourcelibs.com/lib/material.nvim))
 
 **Default Colorscheme:**
 
@@ -111,6 +111,8 @@ Material style: Deep ocean
 
 ### Other Popular Colorschemes:
 1. [Tokyonight](https://github.com/folke/tokyonight.nvim)
+
+## 5) Auto Complete
 
 # How to use?
 List of useful keybinds
