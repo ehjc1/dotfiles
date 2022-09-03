@@ -35,6 +35,7 @@ to ensure it is run `which nvim` and you should get a path `/usr/local/bin/nvim`
 The font that will be used for this configuration will be the `Hack` font.
 
 1. Download `Hack` font from [Nerd Font](https://www.nerdfonts.com/font-downloads)
+  - Hack/complete/regular/Hack Nerd Font Complete Mono.ttf
 
 2. Once downloaded, unzip the font file.
 
@@ -43,6 +44,8 @@ The font that will be used for this configuration will be the `Hack` font.
 4. Onced installed, on *Windows terminal* click on settings and navigate to your linux terminal. 
 
 5. Navigate to your terminal and copy the font files to either your system font folder (often `/usr/share/fonts/`) or user font folder (often ~/.local/share/fonts/)
+
+***NOTE:*** installing fonts into `/usr/share/fonts/` usually works best
 
 you can run this command:
 ```

@@ -88,6 +88,44 @@ Navigate to the official VScode site [here](https://code.visualstudio.com/docs/s
 
 # 3) Tilix Installation
 
+## linux
+1. To Install `Tilix` you run the following command:
+
+*UBUNTU:*
+```
+sudo apt install tilix
+```
+*Fedora:*
+```
+sudo dnf install tilix
+```
+*Arch:*
+```
+pacman -S tilix
+```
+
+2. Once Installed go to settings and change the following options:
+
+  - Appearance -> UNCHECK `Show the terminal title even if it's the only terminal`
+  - Appearance -> Change `Theme Varient` to Dark/light
+  - Appearance -> CHECK `Use tabs instead of sidebar (Application restart required)`
+
+We are now going to change the terminal colour scheme, we will be using `Dracula` for our terminal 
+colour scheme. Official `Dracula` webpage [here](https://draculatheme.com/tilix) 
+To change `Tilix` colour scheme do the following:
+
+1. Click on the link provided above and download the zip file
+
+2. unzip the file
+
+3. Copy `Dracula.json` under `~/.config/tilix/schemes` (first create directory if not exist)
+
+4. Go to `Preferences` and select your Tilix profile
+
+5. Select `Colour` tab 
+
+6. Select `Dracula` from dropdown
+
 
 
 

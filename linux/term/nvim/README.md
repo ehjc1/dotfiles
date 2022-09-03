@@ -112,8 +112,9 @@ Material style: Deep ocean
 ### Other Popular Colorschemes:
 1. [Tokyonight](https://github.com/folke/tokyonight.nvim)
 
-## 5) Auto Complete
 
+
+github for `nvim-lspconfig`
 # How to use?
 List of useful keybinds
 
