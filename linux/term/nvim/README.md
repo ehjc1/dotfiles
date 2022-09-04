@@ -34,7 +34,7 @@ I will be diving into the installations and full configuration of nvim so that i
 - ColourSchemes
 - Autocompletion
 - Adding icons using Nerg Fonts
-- LSP setup tut
+- LSP
 - Telescope
 - Treesitter Syntax Highlighting
 - Autopairs
@@ -101,6 +101,50 @@ Once we have installed vim and nvim we create the neccessary `files` and `dir` i
 ## 4) Colorschemes
 
 1. Copy `colorscheme.lua` file into your `.config/nvim/lua/user` dir
+
+## 5) LSP 
+
+To install a `language server` do: 
+
+1. Mode: `Normal` -> `:LspInstallInfo` 
+
+2. press `/` followed by the language server you want i.e `/pyright` press `i` to install
+
+Useful info:
+
+- `i` install
+- `u` update
+- `X` delete
+
+## 6) Telescope
+
+***NOTE:*** To ensure `live_grep` works please do the following:
+
+1. On a fresh `env` ensure you have [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep#installation) installed
+
+On Fedora:
+
+```
+sudo dnf install ripgrep
+```
+
+On Ubuntu:
+
+```
+sudo apt-get install ripgrep
+```
+
+
+On **macOS homebrew**:
+
+```
+brew install ripgrep
+```
+
+
+
+
+
 
 ### Colorshcme support:
 1. Material Theme (Guide [here](https://opensourcelibs.com/lib/material.nvim))
