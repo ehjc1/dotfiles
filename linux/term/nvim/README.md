@@ -142,9 +142,16 @@ brew install ripgrep
 ```
 
 
+## 7) Treesitter
 
+***NOTE:*** Please ensure you have got all dependencies for C development
 
+## 8) Comments
 
+Usage:
+- `gcc` for individual line comment
+
+- `gc` for group comment in visual mode
 
 ### Colorshcme support:
 1. Material Theme (Guide [here](https://opensourcelibs.com/lib/material.nvim))
@@ -161,5 +168,6 @@ Material style: Deep ocean
 github for `nvim-lspconfig`
 # How to use?
 List of useful keybinds
+- Find files - `SPC f`
 
 
