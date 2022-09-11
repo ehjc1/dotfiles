@@ -1,31 +1,19 @@
-
+# Dev environment setup
 
 This documentation contains information on how to setup a new `Dev` env.
 
-# Overview
-
-Table of Content
----
-
-1. Optimize DNF Config
-2. System Update
-3. Enable RPM
-4. Adding Flatpack
-5. VSCode Installation
-6. Nerd Font Installtion
-	- Basic Installation
-9. ZSH Installtion
-	- Oh my ZSH Installation
-	- Powerlevel10k theme installation
-	- Setup ZSH color scheme
-10. Tilix Installation and configuration
-11. Ranger
-12. bat
-13. starship
-14. Neovim Installation and Configuration
 
 
-# 1) Optimize `DNF` Config
+## Table of Content
+
+1. [Fedora Initial Config](#1-fedora-initial-config)
+2. [VSCode Install](#2-vscode-config)
+3. [Tilix Installation]()
+
+
+# 1) Fedora Initial Config
+
+## 1.1) DNF Config
 
 To get started open up a `terminal` and enter `sudo nano /etc/dnf/dnf.conf`
 
@@ -65,13 +53,13 @@ Save and quit: `ctrl+o` -> `ctrl+x`
 
 
 
-# 2) System Update
+## 1.2) System Update
 
 
 Open `terminal` and run command `sudo dnf update`
 
 
-# 3) Enable RPM Fusion
+## 1.3) Enable RPM Fusion
 
 (Official RPM Fusion site)[https://rpmfusion.org/Configuration]
 
@@ -90,7 +78,53 @@ and
 `sudo dnf groupupdate sound-and-video`
 
 
+## 1.4) Adding Flatpack
 
+Launch your terminal and enter this command `flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
+
+# 2) VScode Config
+
+Navigate to the official VScode site [here](https://code.visualstudio.com/docs/setup/linux)
+
+# 3) Tilix Installation
+
+## linux
+1. To Install `Tilix` you run the following command:
+
+*UBUNTU:*
+```
+sudo apt install tilix
+```
+*Fedora:*
+```
+sudo dnf install tilix
+```
+*Arch:*
+```
+pacman -S tilix
+```
+
+2. Once Installed go to settings and change the following options:
+
+  - Appearance -> UNCHECK `Show the terminal title even if it's the only terminal`
+  - Appearance -> Change `Theme Varient` to Dark/light
+  - Appearance -> CHECK `Use tabs instead of sidebar (Application restart required)`
+
+We are now going to change the terminal colour scheme, we will be using `Dracula` for our terminal 
+colour scheme. Official `Dracula` webpage [here](https://draculatheme.com/tilix) 
+To change `Tilix` colour scheme do the following:
+
+1. Click on the link provided above and download the zip file
+
+2. unzip the file
+
+3. Copy `Dracula.json` under `~/.config/tilix/schemes` (first create directory if not exist)
+
+4. Go to `Preferences` and select your Tilix profile
+
+5. Select `Colour` tab 
+
+6. Select `Dracula` from dropdown
 
 
 
