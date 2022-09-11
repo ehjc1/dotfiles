@@ -153,6 +153,9 @@ Usage:
 
 - `gc` for group comment in visual mode
 
+## 9) linting and Formatting
+
+
 ### Colorshcme support:
 1. Material Theme (Guide [here](https://opensourcelibs.com/lib/material.nvim))
 
