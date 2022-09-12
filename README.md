@@ -12,14 +12,27 @@
 
 ## Contents
 
-- tilix config
+- [fedora36 Config](#Fedora36-Config)
+- [tilix Config](#Tilix-Config)
 - vim (NeoVim) Config
-- bash config
-- zsh config
+- bash Config
+- zsh Config
 
-## tilix config
+## Quick Start
 
-Tilix is a tiling terminal emulator
+TODO: Use Nix to manage packages (works on all system)
+
+
+## Fedora26 Config
+
+
+## Tilix Config
+
+Tilix is a tiling terminal emulator that I will be using. In this config we will cover the following:
+
+- [Installation](#Installation)
+- [Nerd Font Installation](#Nerd-Font-Installation)
+- [Quick Shortcuts](#Shortcuts)
 
 ### Installation:
 
@@ -35,6 +48,11 @@ sudo dnf install tilix
 ```
 pacman -S tilix
 ```
+
+### Nerd Font Installation 
+
+
+### Shortcuts
 
 
 1. clone this repo
