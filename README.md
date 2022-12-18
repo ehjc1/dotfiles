@@ -94,6 +94,7 @@ Tilix is a tiling terminal emulator that I will be using. In this config we will
 
 - [Installation](#Installation)
 - [Nerd Font Installation](#Nerd-Font-Installation)
+- [Terminal Tools](#Terminal-Tools)
 - [Quick Shortcuts](#Shortcuts)
 
 ### Installation:
@@ -129,8 +130,7 @@ Go To:
   - `Bold/complete/Hack Bold Nerd Font Complete Mono.ttf` -> [here](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Bold/complete/Hack%20Bold%20Nerd%20Font%20Complete%20Mono.ttf)
   - `BoldItalic/complete/Hack Bold Italic Nerd Font Complete Mono` -> [here](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/BoldItalic/complete/Hack%20Bold%20Italic%20Nerd%20Font%20Complete%20Mono.ttf)
   - `Italic/complete/Hack Italic Nerd Font Complete Mono.ttf` -> [here](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Italic/complete/Hack%20Italic%20Nerd%20Font%20Complete%20Mono.ttf)
-  - `Regular/complete/Hack Regular Nerd Font Complete Mono.ttf` [here](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)
-4. Once downloaded, move all `.ttf` files into either your system font folder `/usr/share/fonts/` or user font folder `~/.local/share/fonts/` or `/usr/local/share/fonts`
+  - `Regular/complete/Hack Regular Nerd Font Complete Mono.ttf` [here](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf) 4. Once downloaded, move all `.ttf` files into either your system font folder `/usr/share/fonts/` or user font folder `~/.local/share/fonts/` or `/usr/local/share/fonts`
 5. Clear and regenerate your font cache and indexes with the following command:
 
 ```
@@ -143,12 +143,70 @@ fc-list | grep "Hack"
 ```
 6. Change `tilix` fonts to `hack` go to `Appearance` -> your profile -> check custom font and search for `Hack`
 
-### Shortcuts
+### Terminal Tools
+
+Some useful termnal tools to install
+- [Starship](https://starship.rs/)
+- [z](https://github.com/rupa/z)
+
+## Starship
+
+The official Starship documentation can be found [here](https://starship.rs/)
+
+1. With Shell run the following command:
+```bash
+curl -sS https://starship.rs/install.sh | sh
+```
+2. Add the init script to your shell's config file:
+
+**Bash**
+
+Add the following to the end of `~/.bashrc`:
+
+```
+eval "$(starship init bash)"
+```
+
+**Fish**
+
+Add the following to the end of `~/.config/fish/config.fish`:
+
+```
+starship init fish | source
+```
+
+**Zsh**
+
+Add the following to the end of `~/.zshrc`:
+
+```
+eval "$(starship init zsh)
+```
+
+## Z 
+`z` is a useful tool to quickly jump around directories
+
+1. clone the repo into your home directory [here](https://github.com/rupa/z)
+2. Add the following to your shell's config file:
+
+**Bash**
+Add the following to the end of `~/.bashrc`:
+```
+. ~/z/z.sh
+```
+
+**Zsh**
+Add the following to the end of `~/.zshrc`:
+```
+. ~/z/z.sh
+```
+
+### Shortcuts 
 
 - Add terminal right - `Ctrl` + `Alt` + `R`
 - Add terminal down - `Ctrl` + `Alt` + `D`
 - Delete Terminal - `Ctrl` + `Shift` + `W`
-- Switching terminal - `Alt` + `Arror UP | DOWN | LEFT | RIGHT`
+- Switching terminal - `Alt` + ``
 
 
 1. clone this repo
@@ -158,3 +216,47 @@ fc-list | grep "Hack"
 ## Dependencies
 
 1. Nerd Font
+
+## Bash config
+Content
+- [Starship](#Starship)
+- [z](#z)
+
+
+## Starship
+
+The official Starship documentation can be found [here](https://starship.rs/)
+
+1. With Shell run the following command:
+```bash
+curl -sS https://starship.rs/install.sh | sh
+```
+2. Add the init script to your shell's config file:
+
+**Bash**
+
+Add the following to the end of `~/.bashrc`:
+
+```
+eval "$(starship init bash)"
+```
+
+
+## Z 
+`z` is a useful tool to quickly jump around directories
+
+1. clone the repo into your home directory [here](https://github.com/rupa/z)
+2. Add the following to your shell's config file:
+
+**Bash**
+Add the following to the end of `~/.bashrc`:
+```
+. ~/z/z.sh
+```
+
+**Zsh**
+Add the following to the end of `~/.zshrc`:
+```
+. ~/z/z.sh
+```
+
