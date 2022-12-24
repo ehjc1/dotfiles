@@ -94,7 +94,6 @@ Tilix is a tiling terminal emulator that I will be using. In this config we will
 
 - [Installation](#Installation)
 - [Nerd Font Installation](#Nerd-Font-Installation)
-- [Terminal Tools](#Terminal-Tools)
 - [Quick Shortcuts](#Shortcuts)
 
 ### Installation:
@@ -143,64 +142,6 @@ fc-list | grep "Hack"
 ```
 6. Change `tilix` fonts to `hack` go to `Appearance` -> your profile -> check custom font and search for `Hack`
 
-### Terminal Tools
-
-Some useful termnal tools to install
-- [Starship](https://starship.rs/)
-- [z](https://github.com/rupa/z)
-
-## Starship
-
-The official Starship documentation can be found [here](https://starship.rs/)
-
-1. With Shell run the following command:
-```bash
-curl -sS https://starship.rs/install.sh | sh
-```
-2. Add the init script to your shell's config file:
-
-**Bash**
-
-Add the following to the end of `~/.bashrc`:
-
-```
-eval "$(starship init bash)"
-```
-
-**Fish**
-
-Add the following to the end of `~/.config/fish/config.fish`:
-
-```
-starship init fish | source
-```
-
-**Zsh**
-
-Add the following to the end of `~/.zshrc`:
-
-```
-eval "$(starship init zsh)
-```
-
-## Z 
-`z` is a useful tool to quickly jump around directories
-
-1. clone the repo into your home directory [here](https://github.com/rupa/z)
-2. Add the following to your shell's config file:
-
-**Bash**
-Add the following to the end of `~/.bashrc`:
-```
-. ~/z/z.sh
-```
-
-**Zsh**
-Add the following to the end of `~/.zshrc`:
-```
-. ~/z/z.sh
-```
-
 ### Shortcuts 
 
 - Add terminal right - `Ctrl` + `Alt` + `R`
@@ -212,18 +153,25 @@ Add the following to the end of `~/.zshrc`:
 1. clone this repo
 
 2. copy `.config/nvim` to `~/.config/nvim/`
+---
+## NeoVim Config
 
-## Dependencies
+## Quick Start
 
-1. Nerd Font
+For new users who would like to experience NeoVim with all its features catered to beginers
+out of the box:
 
-## Bash config
-Content
+1. In this directory navigate to `.config/nvim/kickstart` and copy the `init.lua` folder
+   into `~/.config/nvim` directory
+
+---
+## Bash Config
+List of useful terminal tools
 - [Starship](#Starship)
 - [z](#z)
 
 
-## Starship
+### Starship
 
 The official Starship documentation can be found [here](https://starship.rs/)
 
@@ -242,7 +190,7 @@ eval "$(starship init bash)"
 ```
 
 
-## Z 
+### Z  
 `z` is a useful tool to quickly jump around directories
 
 1. clone the repo into your home directory [here](https://github.com/rupa/z)
@@ -254,9 +202,9 @@ Add the following to the end of `~/.bashrc`:
 . ~/z/z.sh
 ```
 
-**Zsh**
-Add the following to the end of `~/.zshrc`:
-```
-. ~/z/z.sh
-```
+## Zsh Config
+## Prerequisite
+
+1. Nerd Font
+
 
