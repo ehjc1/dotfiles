@@ -52,6 +52,7 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use({ "nvim-lualine/lualine.nvim", commit = "3362b28f917acc37538b1047f187ff1b5645ecdd" })
 	use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
+  use "ggandor/leap.nvim"
 
   -- Colorschemes
   use 'marko-cerovac/material.nvim' 
