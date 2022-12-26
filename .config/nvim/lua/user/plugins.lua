@@ -73,8 +73,20 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "jose-elias-alvarez/null-ls.nvim"
+  --[[ use "williamboman/nvim-lsp-installer" -- simple to use language server installer ]]
+  --[[ use "jose-elias-alvarez/null-ls.nvim" ]]
+
+  use { -- LSP Configuration & Plugins
+    'neovim/nvim-lspconfig',
+    requires = {
+      -- Automatically install LSPs to stdpath for neovim
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+
+      -- Useful status updates for LSP
+      'j-hui/fidget.nvim',
+    },
+  }
   
   -- Telescope
   use "nvim-telescope/telescope.nvim"
