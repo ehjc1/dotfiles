@@ -77,8 +77,8 @@ return packer.startup(function(use)
   --[[ use "jose-elias-alvarez/null-ls.nvim" ]]
 
   use { -- LSP Configuration & Plugins
-    'neovim/nvim-lspconfig',
     requires = {
+      'neovim/nvim-lspconfig',
       -- Automatically install LSPs to stdpath for neovim
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
