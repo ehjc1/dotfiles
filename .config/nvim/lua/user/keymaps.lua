@@ -62,7 +62,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- TODO: Toggle between material theme styles does not seem to be working 
 -- Enable style toggling
-vim.api.nvim_set_keymap('n', '<leader>ms', ':lua require("material.functions").toggle_style()<CR>', { noremap = true, silent = true })
+--[[ vim.api.nvim_set_keymap('n', '<leader>ms', ':lua require("material.functions").toggle_style()<CR>', { noremap = true, silent = true })key ]]
 
 -- Terminal --
 -- Better terminal navigation
