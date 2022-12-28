@@ -50,7 +50,7 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
-  use({ "nvim-lualine/lualine.nvim", commit = "3362b28f917acc37538b1047f187ff1b5645ecdd" })
+  use "nvim-lualine/lualine.nvim"
 	use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
   use "ggandor/leap.nvim"
 
@@ -72,7 +72,7 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
+  --[[ use "neovim/nvim-lspconfig" -- enable LSP ]]
   --[[ use "williamboman/nvim-lsp-installer" -- simple to use language server installer ]]
   --[[ use "jose-elias-alvarez/null-ls.nvim" ]]
 
