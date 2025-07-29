@@ -115,7 +115,3 @@ keymap("v", "<leader>y", '"+y')
 --     previewer = false,
 --   }))
 -- end, { desc = "[/] Fuzzily search in current buffer]" })
-
--- Nvimtree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-
