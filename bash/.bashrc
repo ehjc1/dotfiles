@@ -25,6 +25,22 @@ fi
 
 unset rc
 
+update-nvim() {
+  tmp_file="/tmp/nvim.appimage"
+  curl -Lo "$tmp_file" https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+  chmod +x "$tmp_file"
+
+  dest=$(which nvim)
+
+  if [ -w "$dest" ]; then
+    sudo mv "$tmp_file" "$dest"
+    echo "Neovim updated at $dest"
+  else
+    echo "Cannot write to $dest. Trying with sudo..."
+    sudo mv "$tmp_file" "$dest" && echo "Neovim updated at $dest"
+  fi
+}
+
 . ~/z/z.sh
 
 export EDITOR=nvim
@@ -40,6 +56,8 @@ alias pk-add="sudo dnf install"
 alias pk-rem="sudo dnf uninstall"
 alias do-release-upgrade="sudo dnf --refresh upgrade;sudo dnf system-upgrade --releasever="
 alias docker-start="sudo systemctl start docker"
+alias update-nvim="curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage"
+
 
 # GIT
 alias gd="git diff"
