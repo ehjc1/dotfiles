@@ -25,22 +25,6 @@ fi
 
 unset rc
 
-update-nvim() {
-  tmp_file="/tmp/nvim.appimage"
-  curl -Lo "$tmp_file" https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
-  chmod +x "$tmp_file"
-
-  dest=$(which nvim)
-
-  if [ -w "$dest" ]; then
-    sudo mv "$tmp_file" "$dest"
-    echo "Neovim updated at $dest"
-  else
-    echo "Cannot write to $dest. Trying with sudo..."
-    sudo mv "$tmp_file" "$dest" && echo "Neovim updated at $dest"
-  fi
-}
-
 . ~/z/z.sh
 
 export EDITOR=nvim
@@ -57,7 +41,7 @@ alias pk-rem="sudo dnf uninstall"
 alias do-release-upgrade="sudo dnf --refresh upgrade;sudo dnf system-upgrade --releasever="
 alias docker-start="sudo systemctl start docker"
 alias update-nvim="curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage"
-
+alias shell-ia="source /home/echew/dev/IntelliMed-Analytics/.venv/bin/activate && python manage.py runserver 8200"
 
 # GIT
 alias gd="git diff"
@@ -69,5 +53,5 @@ alias gpl="git pull"
 alias gp="git push"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion

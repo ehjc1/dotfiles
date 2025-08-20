@@ -4,7 +4,8 @@ NVIM_URL = https://github.com/neovim/neovim/releases/latest/download/nvim-linux-
 TMP_PATH = /tmp/nvimappimage
 DEST = $(shell which nvim 2>/dev/null || echo /usr/local/bin/nvim)
 
-NERD_FONT = FiraCode
+# NERD_FONT = FiraCode
+NERD_FONT = Hack
 FONT_ZIP = $(NERD_FONT).zip
 FONT_URL = https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$(FONT_ZIP)
 
@@ -44,6 +45,15 @@ install:
 	elif [ "$(PKG_MGR)" = "brew" ]; then \
 		brew install stow ripgrep gcc curl unzip; \
 	fi
+	# Install rupa z to home directory
+	@if [ ! -d "$(HOME)/z" ]; then \
+		git clone https://github.com/rupa/z.git $(HOME)/z; \
+	fi
+	# Install starship
+	@if ! command -v starship >/dev/null 2>&1; then \
+		curl -sS https://starship.rs/install.sh | sh -s -- -y; \
+	fi
+
 	@echo "Packages installed"
 	@$(MAKE) update-nvim
 	@$(MAKE) install-font
