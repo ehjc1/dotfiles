@@ -41,7 +41,7 @@ alias pk-rem="sudo dnf uninstall"
 alias do-release-upgrade="sudo dnf --refresh upgrade;sudo dnf system-upgrade --releasever="
 alias docker-start="sudo systemctl start docker"
 alias update-nvim="curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage"
-alias shell-ia="source /home/echew/dev/IntelliMed-Analytics/.venv/bin/activate && python manage.py runserver 8200"
+alias shell-ia="source /home/eugenechew/dev/IntelliMed-Analytics/.venv/bin/activate && python manage.py runserver 8200"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
