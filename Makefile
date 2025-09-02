@@ -37,17 +37,13 @@ install:
 	fi
 
 	@if [ "$(PKG_MGR)" = "apt" ]; then \
-		sudo apt update && sudo apt install -y zoxide stow ripgrep build-essential g++ curl unzip; \
+		sudo apt update && sudo apt install -y stow ripgrep build-essential g++ curl unzip zoxide fzf; \
 	elif [ "$(PKG_MGR)" = "dnf" ]; then \
-		sudo dnf install -y zoxide stow ripgrep gcc-c++ curl unzip; \
+		sudo dnf install -y stow ripgrep gcc-c++ curl unzip zoxide fzf; \
 	elif [ "$(PKG_MGR)" = "pacman" ]; then \
-		sudo pacman -Sy --noconfirm zoxide stow ripgrep base-devel gcc curl unzip; \
+		sudo pacman -Sy --noconfirm stow ripgrep base-devel gcc curl unzip zoxide fzf; \
 	elif [ "$(PKG_MGR)" = "brew" ]; then \
-		brew install zoxide stow ripgrep gcc curl unzip; \
-	fi
-	# Install rupa z to home directory
-	@if [ ! -d "$(HOME)/z" ]; then \
-		git clone https://github.com/rupa/z.git $(HOME)/z; \
+		brew install stow ripgrep gcc curl unzip zoxide fzf; \
 	fi
 	# Install starship
 	@if ! command -v starship >/dev/null 2>&1; then \
