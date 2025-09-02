@@ -25,13 +25,14 @@ fi
 
 unset rc
 
-. ~/z/z.sh
+# . ~/z/z.sh
 
 export EDITOR=nvim
 export PAGER=bat
 # SETTING the STARSHIP PROMPT
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=~/.config/starship.toml
+export FZF_DEFAULT_OPTS='--height 40%'
 
 # ALIASES
 alias e=nvim
@@ -41,10 +42,14 @@ alias pk-rem="sudo dnf uninstall"
 alias do-release-upgrade="sudo dnf --refresh upgrade;sudo dnf system-upgrade --releasever="
 alias docker-start="sudo systemctl start docker"
 alias update-nvim="curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage"
-alias shell-ia="source /home/eugenechew/dev/IntelliMed-Analytics/.venv/bin/activate && python manage.py runserver 8200"
+alias shell-im="source .venv/bin/activate"
+alias run-svr="python manage.py runserver"
+alias run-ia="source /home/eugenechew/dev/IntelliMed-Analytics/.venv/bin/activate && python manage.py runserver 8200"
+alias run-ic="source /home/eugenechew/dev/IntelliMed/Central/IntelliMed-Central/.venv/bin/activate && python manage.py runserver 8100"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias bat="batcat"
 
 # GIT
 alias gd="git diff"
@@ -58,3 +63,4 @@ alias gp="git push"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+eval "$(zoxide init bash)"
