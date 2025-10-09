@@ -43,7 +43,7 @@ alias do-release-upgrade="sudo dnf --refresh upgrade;sudo dnf system-upgrade --r
 alias docker-start="sudo systemctl start docker"
 alias update-nvim="curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage"
 alias shell-im="source .venv/bin/activate"
-alias run-svr="python manage.py runserver"
+alias run-svr="python3 manage.py runserver"
 alias run-ia="source /home/eugenechew/dev/IntelliMed-Analytics/.venv/bin/activate && python manage.py runserver 8200"
 alias run-ic="source /home/eugenechew/dev/IntelliMed/Central/IntelliMed-Central/.venv/bin/activate && python manage.py runserver 8100"
 alias ll='ls -alF'
@@ -59,6 +59,8 @@ alias gcm="git commit"
 alias gck="git checkout"
 alias gpl="git pull"
 alias gp="git push"
+alias gb="git blame -w -C -C -C -L"
+alias lg="lazygit"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
