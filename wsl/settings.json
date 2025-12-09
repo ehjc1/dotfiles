@@ -1,0 +1,220 @@
+{
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "right"
+      },
+      "id": "User.moveFocus.87C324ED"
+    },
+    {
+      "command": "openTabRenamer",
+      "id": "User.openTabRenamer"
+    },
+    {
+      "command": {
+        "action": "closeTab"
+      },
+      "id": "User.closeTab.0"
+    }
+  ],
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+  "defaultProfile": "{6982501f-f61e-5100-8faf-7ce1ff5244c5}",
+  "firstWindowPreference": "persistedWindowLayout",
+  "keybindings": [
+    {
+      "id": "Terminal.CopyToClipboard",
+      "keys": "ctrl+c"
+    },
+    {
+      "id": null,
+      "keys": "alt+shift+minus"
+    },
+    {
+      "id": "Terminal.PasteFromClipboard",
+      "keys": "ctrl+v"
+    },
+    {
+      "id": "Terminal.DuplicatePaneAuto",
+      "keys": "alt+shift+d"
+    },
+    {
+      "id": "Terminal.DuplicatePaneDown",
+      "keys": "ctrl+alt+d"
+    },
+    {
+      "id": "Terminal.DuplicatePaneRight",
+      "keys": "ctrl+alt+r"
+    },
+    {
+      "id": null,
+      "keys": "alt+shift+plus"
+    },
+    {
+      "id": "Terminal.ClosePane",
+      "keys": "ctrl+alt+q"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+w"
+    },
+    {
+      "id": null,
+      "keys": "alt+left"
+    },
+    {
+      "id": "Terminal.MoveFocusLeft",
+      "keys": "alt+h"
+    },
+    {
+      "id": null,
+      "keys": "alt+right"
+    },
+    {
+      "id": "Terminal.MoveFocusUp",
+      "keys": "alt+k"
+    },
+    {
+      "id": "User.closeTab.0",
+      "keys": "ctrl+alt+w"
+    },
+    {
+      "id": null,
+      "keys": "alt+up"
+    },
+    {
+      "id": "Terminal.MoveFocusDown",
+      "keys": "alt+j"
+    },
+    {
+      "id": null,
+      "keys": "alt+down"
+    },
+    {
+      "id": "User.moveFocus.87C324ED",
+      "keys": "alt+l"
+    },
+    {
+      "id": "User.openTabRenamer",
+      "keys": "ctrl+shift+r"
+    }
+  ],
+  "newTabMenu": [
+    {
+      "type": "remainingProfiles"
+    }
+  ],
+  "profiles": {
+    "defaults": {},
+    "list": [
+      {
+        "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "hidden": false,
+        "name": "Windows PowerShell"
+      },
+      {
+        "commandline": "%SystemRoot%\\System32\\cmd.exe",
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": false,
+        "name": "Command Prompt"
+      },
+      {
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": false,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      },
+      {
+        "colorScheme": "Catppuccin Frappe",
+        "font": {
+          "face": "Hack Nerd Font Mono"
+        },
+        "guid": "{254f3a77-6756-57a3-b0b6-1900fe925565}",
+        "hidden": false,
+        "name": "Ubuntu-24.04",
+        "source": "Microsoft.WSL"
+      },
+      {
+        "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
+        "hidden": true,
+        "name": "Ubuntu-22.04",
+        "source": "Windows.Terminal.Wsl"
+      },
+      {
+        "colorScheme": "Catppuccin Frappe",
+        "font": {
+          "face": "Hack Nerd Font Mono"
+        },
+        "guid": "{e81b1ed5-765f-5d32-ab02-3ad8f9c1f9f9}",
+        "hidden": false,
+        "name": "Ubuntu-24.04",
+        "opacity": 90,
+        "source": "Microsoft.WSL",
+        "useAcrylic": true
+      },
+      {
+        "colorScheme": "Catppuccin Frappe",
+        "font": {
+          "face": "Hack Nerd Font Mono"
+        },
+        "guid": "{6982501f-f61e-5100-8faf-7ce1ff5244c5}",
+        "hidden": false,
+        "name": "Ubuntu",
+        "opacity": 85,
+        "source": "Microsoft.WSL",
+        "useAcrylic": true
+      }
+    ]
+  },
+  "schemes": [
+    {
+      "background": "#303446",
+      "black": "#51576D",
+      "blue": "#8CAAEE",
+      "brightBlack": "#626880",
+      "brightBlue": "#8CAAEE",
+      "brightCyan": "#81C8BE",
+      "brightGreen": "#A6D189",
+      "brightPurple": "#F4B8E4",
+      "brightRed": "#E78284",
+      "brightWhite": "#A5ADCE",
+      "brightYellow": "#E5C890",
+      "cursorColor": "#F2D5CF",
+      "cyan": "#81C8BE",
+      "foreground": "#C6D0F5",
+      "green": "#A6D189",
+      "name": "Catppuccin Frappe",
+      "purple": "#F4B8E4",
+      "red": "#E78284",
+      "selectionBackground": "#626880",
+      "white": "#B5BFE2",
+      "yellow": "#E5C890"
+    }
+  ],
+  "themes": [
+    {
+      "name": "Catppuccin Frappe",
+      "tab": {
+        "background": "#303446FF",
+        "iconStyle": "default",
+        "showCloseButton": "always",
+        "unfocusedBackground": null
+      },
+      "tabRow": {
+        "background": "#292C3CFF",
+        "unfocusedBackground": "#232634FF"
+      },
+      "window": {
+        "applicationTheme": "dark",
+        "experimental.rainbowFrame": false,
+        "frame": null,
+        "unfocusedFrame": null,
+        "useMica": false
+      }
+    }
+  ]
+}
