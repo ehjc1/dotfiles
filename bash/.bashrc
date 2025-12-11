@@ -46,6 +46,7 @@ alias run-shell="source .venv/bin/activate"
 alias run-svr="python3 manage.py runserver"
 alias run-ia="source /home/eugenechew/dev/IntelliMed-Analytics/.venv/bin/activate && python manage.py runserver 8200"
 alias run-ic="source /home/eugenechew/dev/IntelliMed/Central/IntelliMed-Central/.venv/bin/activate && python manage.py runserver 8100"
+alias ps="powershell.exe -executionpolicy bypass"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
