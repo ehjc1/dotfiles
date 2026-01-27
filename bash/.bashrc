@@ -25,6 +25,23 @@ fi
 
 unset rc
 
+# UTILITY FUNCTIONS:
+function venv() {
+  if [[ -z $1 ]]; then
+    source "$PWD/.venv/bin/activate"
+  else
+    source "$1/.venv/bin/activate"
+  fi
+}
+
+function run_django() {
+  if [[ -z $1 ]]; then
+    python3 manage.py runserver
+  else
+    python3 manage.py runserver $1
+  fi
+}
+
 # . ~/z/z.sh
 
 export EDITOR=nvim

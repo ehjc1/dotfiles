@@ -111,6 +111,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# UTILITY FUNCTIONS:
+function venv() {
+  if [[ -z $1 ]]; then
+    source "$PWD/.venv/bin/activate"
+  else
+    source "$1/.venv/bin/activate"
+  fi
+}
+
+function run_django() {
+  if [[ -z $1 ]]; then
+    python3 manage.py runserver
+  else
+    python3 manage.py runserver $1
+  fi
+}
+
 export EDITOR=nvim
 
 # Z setup
@@ -126,13 +143,29 @@ alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 alias pk-add="sudo dnf install"
 alias pk-rem="sudo dnf uninstall"
 alias do-release-upgrade="sudo dnf --refresh upgrade;sudo dnf system-upgrade --releasever="
+alias docker-start="sudo systemctl start docker"
+alias update-nvim="curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage"
+alias run-shell="source .venv/bin/activate"
+alias run-svr="python3 manage.py runserver"
+alias run-ia="source /home/eugenechew/dev/IntelliMed-Analytics/.venv/bin/activate && python manage.py runserver 8200"
+alias run-ic="source /home/eugenechew/dev/IntelliMed/Central/IntelliMed-Central/.venv/bin/activate && python manage.py runserver 8100"
+alias ps="powershell.exe -executionpolicy bypass"
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias bat="batcat"
+alias z="zoxide"
 
 # GIT
 alias gd="git diff"
 alias gst="git status"
 alias ga="git add"
 alias gcm="git commit"
+alias gck="git checkout"
+alias gpl="git pull"
 alias gp="git push"
+alias gb="git blame -w -C -C -C -L"
+alias lg="lazygit"
 # ---- Eza (better ls) -----
 
 alias ls="eza --icons=always"
