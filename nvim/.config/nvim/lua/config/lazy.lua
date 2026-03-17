@@ -22,6 +22,9 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.svelte" },
     -- import/override with your plugins
     { import = "plugins" },
+    -- other plugins
+    { "nvim-mini/mini.nvim", version = false },
+    { "folke/flash.nvim", enabled = false },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
