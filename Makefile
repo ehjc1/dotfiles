@@ -27,7 +27,12 @@ else
 	FONT_DIR = ~/.local/share/fonts
 endif
 
-.PHONY: install update-nvim install-font
+.PHONY: install update-nvim install-font stow
+
+# --no-folding keeps ~/.claude a real dir so runtime files (history,
+# credentials, cache) never land inside the repo
+stow:
+	stow --no-folding ai
 
 install:
 	@echo "Detected OS: $(OS), Package Manager: $(PKG_MGR)"
@@ -53,6 +58,7 @@ install:
 	@echo "Packages installed"
 	@$(MAKE) update-nvim
 	@$(MAKE) install-font
+	@$(MAKE) stow
 
 update-nvim:
 	@echo "Downloading latest Neovim AppImage..."

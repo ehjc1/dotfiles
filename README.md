@@ -12,6 +12,7 @@
 # Installation
 ```
 stow --target ~/.config .
+stow --no-folding ai   # AI config (~/.claude), or: make stow
 ```
 
 TODO:
