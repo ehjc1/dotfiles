@@ -33,6 +33,7 @@ return {
           enabled = false,
         },
       },
+      inlay_hints = { enabled = false },
     },
     setup = {
       pyright = function(_, opts)

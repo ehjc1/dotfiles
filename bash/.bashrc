@@ -70,6 +70,10 @@ alias l='ls -CF'
 alias bat="batcat"
 alias z="zoxide"
 
+# AI
+alias cc="claude"
+alias cx="codex"
+
 # GIT
 alias gd="git diff"
 alias gst="git status"
