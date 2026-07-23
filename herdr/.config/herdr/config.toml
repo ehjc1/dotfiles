@@ -1,0 +1,49 @@
+# Ported from ~/dotfiles/tmux/.tmux.conf
+# herdr is a workspace manager, not a full tmux clone, so only settings with a
+# real herdr equivalent carry over. See "Not ported" at the bottom.
+
+onboarding = false
+
+[theme]
+name = "catppuccin"          # tmux: omerxx/catppuccin-tmux
+
+[ui]
+mouse_capture = true         # tmux: set -g mouse on
+
+agent_panel_sort = "spaces"
+[keys]
+prefix = "ctrl+a"            # tmux: set -g prefix ^A
+
+# Tabs (tmux windows)
+new_tab = "prefix+ctrl+c"        # tmux: bind ^C new-window
+previous_tab = "prefix+shift+h"  # tmux: bind H previous-window
+next_tab = "prefix+shift+l"      # tmux: bind L next-window
+rename_tab = "prefix+r"          # tmux: bind r rename-window
+reload_config = "prefix+shift+r" # tmux: bind R source-file
+
+# Workspaces (tmux sessions)
+workspace_picker = "prefix+shift+s" # tmux: bind S choose-session
+detach = "prefix+ctrl+d"            # tmux: bind ^D detach
+
+# Panes
+split_vertical = "prefix+v"    # tmux: bind v split-window -h
+split_horizontal = "prefix+s"  # tmux: bind s split-window -v
+focus_pane_left = "prefix+h"   # tmux: bind h select-pane -L
+focus_pane_down = "prefix+j"   # tmux: bind j select-pane -D
+focus_pane_up = "prefix+k"     # tmux: bind k select-pane -U
+focus_pane_right = "prefix+l"  # tmux gave l to refresh-client (no herdr equiv); kept default
+close_pane = "prefix+c"        # tmux: bind c kill-pane
+zoom = "prefix+z"              # tmux: bind z resize-pane -Z
+
+# Relocated because the user bindings above took their default keys
+resize_mode = "prefix+minus"   # herdr default was prefix+r (now rename); tmux `-` was resize
+settings = "prefix+comma"      # herdr default was prefix+s (now split)
+
+# Not ported (no config-level herdr equivalent):
+#   base-index / renumber-windows / escape-time / history-limit / status-position
+#   mode-keys vi           -> herdr navigate mode already uses h/j/k/l
+#   swap-pane / sync-panes / pane-border-status / list-windows / command-prompt
+#   Plugins (tpm): tmux-sensible, tmux-yank, resurrect, continuum, thumbs,
+#     tmux-fzf, tmux-fzf-url, sessionx, floax. herdr covers the big ones natively:
+#     session persistence (built-in server), sessionx -> workspace_picker,
+#     floax -> [[keys.command]] type = "popup".

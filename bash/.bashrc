@@ -42,6 +42,19 @@ function run_django() {
   fi
 }
 
+# Install django-stubs into ./typings so pyright CLI matches Pylance,
+# without adding a dev dependency to pyproject.toml. Run from project root.
+function django-typings() {
+  local tmp
+  tmp=$(mktemp -d)
+  uv pip install django-stubs --target="$tmp" &&
+    mkdir -p typings &&
+    rm -rf typings/django &&
+    cp -r "$tmp/django-stubs" typings/django &&
+    grep -qx "typings/" .git/info/exclude 2>/dev/null || echo "typings/" >> .git/info/exclude
+  rm -rf "$tmp"
+}
+
 # . ~/z/z.sh
 
 export EDITOR=nvim
