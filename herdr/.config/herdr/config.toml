@@ -5,10 +5,14 @@
 onboarding = false
 
 [theme]
-name = "catppuccin"          # tmux: omerxx/catppuccin-tmux
+name = "rose-pine"
 
+auto_switch = false
 [ui]
 mouse_capture = true         # tmux: set -g mouse on
+# "auto" draws herdr's own (always block) cursor on WSL. "native" hands the cursor
+# to the outer terminal so pane apps' own shape requests (bar in insert mode) apply.
+host_cursor = "native"
 
 agent_panel_sort = "spaces"
 [keys]
