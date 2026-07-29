@@ -27,7 +27,7 @@ else
 	FONT_DIR = ~/.local/share/fonts
 endif
 
-.PHONY: install update-nvim install-font stow
+.PHONY: install update-nvim install-font install-herdr update-herdr stow
 
 # --no-folding keeps ~/.claude a real dir so runtime files (history,
 # credentials, cache) never land inside the repo
@@ -58,6 +58,7 @@ install:
 	@echo "Packages installed"
 	@$(MAKE) update-nvim
 	@$(MAKE) install-font
+	@$(MAKE) install-herdr
 	@$(MAKE) stow
 
 update-nvim:
@@ -67,6 +68,24 @@ update-nvim:
 	@echo "Installing to $(DEST)..."
 	sudo mv $(TMP_PATH) $(DEST)
 	@echo "Neovim updated at $(DEST)"
+
+install-herdr:
+	@if command -v herdr >/dev/null 2>&1; then \
+		echo "herdr already installed at $$(command -v herdr)"; \
+	elif [ "$(PKG_MGR)" = "brew" ]; then \
+		brew install herdr; \
+	else \
+		echo "Installing herdr..."; \
+		curl -fsSL https://herdr.dev/install.sh | sh; \
+	fi
+
+# brew installs update through brew; direct installs self-update
+update-herdr:
+	@if [ "$(PKG_MGR)" = "brew" ]; then \
+		brew upgrade herdr; \
+	else \
+		herdr update; \
+	fi
 
 install-font:
 	@echo "Installing Nerd Font: $(NERD_FONT)..."
