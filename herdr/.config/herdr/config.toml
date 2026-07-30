@@ -9,14 +9,14 @@ name = "rose-pine"
 
 auto_switch = false
 [ui]
-mouse_capture = true         # tmux: set -g mouse on
+mouse_capture = true # tmux: set -g mouse on
 # "auto" draws herdr's own (always block) cursor on WSL. "native" hands the cursor
 # to the outer terminal so pane apps' own shape requests (bar in insert mode) apply.
 host_cursor = "native"
 
 agent_panel_sort = "spaces"
 [keys]
-prefix = "ctrl+a"            # tmux: set -g prefix ^A
+prefix = "ctrl+a" # tmux: set -g prefix ^A
 
 # Tabs (tmux windows)
 new_tab = "prefix+ctrl+c"        # tmux: bind ^C new-window
@@ -26,22 +26,27 @@ rename_tab = "prefix+r"          # tmux: bind r rename-window
 reload_config = "prefix+shift+r" # tmux: bind R source-file
 
 # Workspaces (tmux sessions)
-workspace_picker = "prefix+shift+s" # tmux: bind S choose-session
-detach = "prefix+ctrl+d"            # tmux: bind ^D detach
+workspace_picker = "prefix+o" # tmux: bind S choose-session
+detach = "prefix+ctrl+d"      # tmux: bind ^D detach
+
+# Workspace picker list navigation (nvim-style: k up, j down)
+navigate_workspace_up = "k"
+navigate_workspace_down = "j"
+next_workspace = "prefix+n"
 
 # Panes
-split_vertical = "prefix+v"    # tmux: bind v split-window -h
-split_horizontal = "prefix+s"  # tmux: bind s split-window -v
-focus_pane_left = "prefix+h"   # tmux: bind h select-pane -L
-focus_pane_down = "prefix+j"   # tmux: bind j select-pane -D
-focus_pane_up = "prefix+k"     # tmux: bind k select-pane -U
-focus_pane_right = "prefix+l"  # tmux gave l to refresh-client (no herdr equiv); kept default
-close_pane = "prefix+c"        # tmux: bind c kill-pane
-zoom = "prefix+z"              # tmux: bind z resize-pane -Z
+split_vertical = "prefix+v"   # tmux: bind v split-window -h
+split_horizontal = "prefix+s" # tmux: bind s split-window -v
+focus_pane_left = "prefix+h"  # tmux: bind h select-pane -L
+focus_pane_down = "prefix+j"  # tmux: bind j select-pane -D
+focus_pane_up = "prefix+k"    # tmux: bind k select-pane -U
+focus_pane_right = "prefix+l" # tmux gave l to refresh-client (no herdr equiv); kept default
+close_pane = "prefix+c"       # tmux: bind c kill-pane
+zoom = "prefix+z"             # tmux: bind z resize-pane -Z
 
 # Relocated because the user bindings above took their default keys
-resize_mode = "prefix+minus"   # herdr default was prefix+r (now rename); tmux `-` was resize
-settings = "prefix+comma"      # herdr default was prefix+s (now split)
+resize_mode = "prefix+minus" # herdr default was prefix+r (now rename); tmux `-` was resize
+settings = "prefix+comma"    # herdr default was prefix+s (now split)
 
 # Not ported (no config-level herdr equivalent):
 #   base-index / renumber-windows / escape-time / history-limit / status-position
