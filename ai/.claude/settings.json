@@ -1,0 +1,81 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./**/.env)",
+      "Read(./**/.env.*)",
+      "Read(./secrets/**)",
+      "Read(./.secrets/**)",
+      "Read(./private/**)",
+      "Read(./credentials/**)",
+      "Read(./*.pem)",
+      "Read(./*.key)",
+      "Read(./*.p12)",
+      "Read(./*.pfx)",
+      "Read(./id_rsa*)",
+      "Read(./id_ed25519*)",
+      "Read(./service-account*.json)",
+      "Read(./firebase-adminsdk*.json)",
+      "Read(./google-credentials*.json)",
+      "Read(./aws-credentials*)",
+      "Read(./.npmrc)",
+      "Read(./.pypirc)",
+      "Read(./.netrc)",
+      "Read(./.ssh/**)",
+      "Read(./.aws/**)",
+      "Read(./.gcloud/**)",
+      "Read(./.azure/**)"
+    ]
+  },
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "pyright-lsp@claude-plugins-official": true,
+    "agent-skills@addy-agent-skills": true,
+    "svelte@svelte": true,
+    "ponytail@ponytail": true,
+    "caveman@caveman": true,
+    "impeccable@impeccable": true
+  },
+  "extraKnownMarketplaces": {
+    "addy-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "addyosmani/agent-skills"
+      }
+    },
+    "svelte": {
+      "source": {
+        "source": "github",
+        "repo": "sveltejs/ai-tools"
+      }
+    },
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    },
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
+      },
+      "autoUpdate": true
+    }
+  },
+  "effortLevel": "xhigh",
+  "tui": "fullscreen",
+  "theme": "auto",
+  "agentPushNotifEnabled": true
+}

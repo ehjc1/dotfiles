@@ -27,12 +27,36 @@ else
 	FONT_DIR = ~/.local/share/fonts
 endif
 
-.PHONY: install update-nvim install-font install-herdr update-herdr stow
+.PHONY: install update-nvim install-font install-herdr update-herdr stow install-ai install-mcp link-agents
+
+MCP_FILE = $(CURDIR)/ai/.claude/mcp-servers.json
+CLAUDE_MD = $(CURDIR)/ai/.claude/CLAUDE.md
+# Agents reading AGENTS.md instead of CLAUDE.md. Add a config dir here and it
+# gets the same instructions - one source of truth, no per-agent copy.
+AGENT_DIRS = $(HOME)/.codex $(HOME)/.config/opencode
 
 # --no-folding keeps ~/.claude a real dir so runtime files (history,
 # credentials, cache) never land inside the repo
 stow:
 	stow --no-folding ai
+
+# settings.json carries enabledPlugins + extraKnownMarketplaces, so Claude
+# reinstalls every plugin itself on next launch. MCP servers live in
+# ~/.claude.json (not stowable, holds OAuth state) so they are replayed here.
+install-ai: stow link-agents install-mcp
+	@echo "Claude config linked. Plugins install on next 'claude' launch."
+	@echo "claude.ai connectors (Notion/Gmail/Drive/Calendar) sync after login."
+
+link-agents:
+	@for d in $(AGENT_DIRS); do \
+		mkdir -p $$d; \
+		ln -sfn $(CLAUDE_MD) $$d/AGENTS.md; \
+		echo "linked $$d/AGENTS.md -> $(CLAUDE_MD)"; \
+	done
+
+install-mcp:
+	@command -v claude >/dev/null 2>&1 || { echo "claude CLI not found, skipping MCP"; exit 0; }
+	@python3 -c 'import json,subprocess;[subprocess.run(["claude","mcp","add-json","--scope","user",n,json.dumps(c)]) for n,c in json.load(open("$(MCP_FILE)"))["mcpServers"].items()]'
 
 install:
 	@echo "Detected OS: $(OS), Package Manager: $(PKG_MGR)"
@@ -59,7 +83,7 @@ install:
 	@$(MAKE) update-nvim
 	@$(MAKE) install-font
 	@$(MAKE) install-herdr
-	@$(MAKE) stow
+	@$(MAKE) install-ai
 
 update-nvim:
 	@echo "Downloading latest Neovim AppImage..."
