@@ -28,7 +28,7 @@
       "Read(./.azure/**)"
     ]
   },
-  "model": "opus",
+  "model": "claude-fable-5-1[1m]",
   "statusLine": {
     "type": "command",
     "command": "bash ~/.claude/statusline-command.sh"
@@ -75,7 +75,48 @@
     }
   },
   "effortLevel": "xhigh",
+  "modelSettings": {
+    "claude-fable-5": {
+      "effortLevel": "xhigh"
+    },
+    "claude-opus-5": {
+      "effortLevel": "high"
+    },
+    "claude-fable-5-1": {
+      "effortLevel": "high"
+    }
+  },
   "tui": "fullscreen",
+  "skipWorkflowUsageWarning": true,
   "theme": "auto",
-  "agentPushNotifEnabled": true
+  "fileCheckpointingEnabled": true,
+  "agentPushNotifEnabled": true,
+  "autoMode": {
+    "environment": [
+      "### Org-wide",
+      "**Organization**: None configured",
+      "**Cloud provider(s)**: Azure (Azure Blob Storage — KFST-Backend file storage per CLAUDE.md)",
+      "**Repository visibility**: assume private (no remotes configured; cannot verify via gh — no evidence of public hosting)",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: None configured",
+      "**Default / protected branches**: unknown — origin/HEAD unset, no remotes configured; CLAUDE.md instructs never to commit to main or master",
+      "**CI/CD deploy targets**: None configured",
+      "**Network posture**: None configured",
+      "**Source control**: The trusted repo (local working directory at /home/eugenechew/dev/HPS/clients/KFST) — no remotes configured",
+      "**Trusted internal domains**: ttto.org.nz (KFST public site / referral intake domain)",
+      "**Trusted cloud buckets**: None configured",
+      "**Key internal services**: kfst.exess.co.nz (existing Exess case management system being replaced/co-existing with KFST)",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: tamariki/whānau case records, referrals, assessments, plans/goals, consents with digital signatures, supervision records — regulated social-services data for Kirikiriroa Family Services Trust (KFST/Tamariki Tū Tamariki Ora); .env, .secrets, KFST-Backend/.env, KFST-Backend/.env.example, KFST-Frontend/.env, KFST-Frontend/.env.example, KFST-Robot/.env; share only with audiences cleared at the [named+specifics] bar",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries prod or production as a whole word or name segment",
+      "**Protected deployment namespaces / environments**: None configured — fall back to the Sensitive remote targets heuristic",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries prod or production as a whole word or name segment",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development (Django/SvelteKit case management platform for KFST)",
+      "**Trusted repo**: The git repository at /home/eugenechew/dev/HPS/clients/KFST (no remotes configured)",
+      "**Org-specific CLIs**: graphify (personal Claude Code skill invoked via /graphify), uv (Python package manager), pnpm (Node package manager)",
+      "routine under KFST-Backend/ and KFST-Frontend/ prefixes within this repo"
+    ]
+  }
 }

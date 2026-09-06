@@ -120,12 +120,17 @@ function venv() {
   fi
 }
 
+function django-makemigrations() {
+  python3 manage.py makemigrations "$@"
+}
+
+function django-migrate() {
+  python3 manage.py migrate "$@"
+}
+
+# makemigrations/migrate are no-ops when nothing changed, so no check step needed.
 function run_django() {
-  if [[ -z $1 ]]; then
-    python3 manage.py runserver
-  else
-    python3 manage.py runserver $1
-  fi
+  django-makemigrations && django-migrate && python3 manage.py runserver "$@"
 }
 
 # Install django-stubs into ./typings so pyright CLI matches Pylance,

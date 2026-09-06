@@ -14,3 +14,4 @@
 - Treat `.env`, `.env.*`, private keys, service account files, credential directories, config directories and package manager auth files as forbidden.
 - If a task requires a secret value, ask me to provide a redacted example instead.
 - Use `.env.example` for documentation, never real `.env` files.
+- Never commit to main, master

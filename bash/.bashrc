@@ -28,18 +28,23 @@ unset rc
 # UTILITY FUNCTIONS:
 function venv() {
   if [[ -z $1 ]]; then
-    source "$PWD/.venv/bin/activate"
+    source "$PWD/.venv/bin/activate" # commented out by conda initialize
   else
-    source "$1/.venv/bin/activate"
+    source "$1/.venv/bin/activate" # commented out by conda initialize
   fi
 }
 
-function run_django() {
-  if [[ -z $1 ]]; then
-    python3 manage.py runserver
-  else
-    python3 manage.py runserver $1
-  fi
+function mm() {
+  python3 manage.py makemigrations "$@"
+}
+
+function migrate() {
+  python3 manage.py migrate "$@"
+}
+
+# makemigrations/migrate are no-ops when nothing changed, so no check step needed.
+function run-django() {
+  mm && migrate && python3 manage.py runserver "$@"
 }
 
 # Install django-stubs into ./typings so pyright CLI matches Pylance,
@@ -51,7 +56,7 @@ function django-typings() {
     mkdir -p typings &&
     rm -rf typings/django &&
     cp -r "$tmp/django-stubs" typings/django &&
-    grep -qx "typings/" .git/info/exclude 2>/dev/null || echo "typings/" >> .git/info/exclude
+    grep -qx "typings/" .git/info/exclude 2>/dev/null || echo "typings/" >>.git/info/exclude
   rm -rf "$tmp"
 }
 
@@ -112,3 +117,18 @@ eval "$(fzf --bash)"
 
 # opencode
 export PATH=/home/eugenechew/.opencode/bin:$PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/eugenechew/yes/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
+if [ $? -eq 0 ]; then
+  eval "$__conda_setup"
+else
+  if [ -f "/home/eugenechew/yes/etc/profile.d/conda.sh" ]; then
+    . "/home/eugenechew/yes/etc/profile.d/conda.sh"
+  else
+    export PATH="/home/eugenechew/yes/bin:$PATH"
+  fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
